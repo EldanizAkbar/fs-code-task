@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Reservation</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/website-logo.png" type="image/x-icon">
+
+    <!-- External JavaScript -->
+    <script src="assets/js/code.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Steps -->
+        <div class="steps">
+            <div class="step active" id="step1">
+                <span>1</span>
+                <p>Staff</p>
+            </div>
+            <div class="step" id="step2">
+                <span>2</span>
+                <p>Service</p>
+            </div>
+            <div class="step" id="step3">
+                <span>3</span>
+                <p>Date & Time</p>
+            </div>
+            <div class="step" id="step4">
+                <span>4</span>
+                <p>Confirmation</p>
+            </div>
+        </div>
+
+        <!-- Content Body -->
+        <div class="content" id="content">
+            <div class="header-container">
+                <h1>Select staff</h1>
+            </div>
+            <div class="content-body">
+                <!-- Staff Container -->
+                <div class="staff-container" id="staffContainer"></div>
+
+                <!-- Service Container -->
+                <div class="service-container" id="serviceContainer"></div>
+
+                <!-- Date & Time Container -->
+                <div class="data-container" id="dataContainer">
+                    <!-- Calendar Container -->
+                    <div class="calendar-container">
+                        <div class="month">
+                            <a href="#" class="nav" id="prevMonth"><i class="fas fa-angle-left"></i></a>
+                            <div id="currentMonthYear">February <span class="year">2024</span></div>
+                            <a href="#" class="nav" id="nextMonth"><i class="fas fa-angle-right"></i></a>
+                        </div>
+                        <div class="calendar">
+                            <div class="days">
+                                <span>Sun</span>
+                                <span>Mon</span>
+                                <span>Tue</span>
+                                <span>Wed</span>
+                                <span>Thu</span>
+                                <span>Fri</span>
+                                <span>Sat</span>
+                            </div>
+                            <div class="dates" id="dates"></div>
+                        </div>
+                    </div>
+
+                    <!-- Time Container -->
+                    <div class="time-container">
+                        <div>
+                            <h3>Time</h3>
+                        </div>
+                        <div class="chosen-time-container" id="timeContainer">
+                            <div class="chosen-date-container">
+                                <h1 class="chosen-date" id="chosenDate">Select date</h1>
+                            </div>
+                            <div class="times" id="times"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confirmation Container -->
+                <div class="confirmation-container" id="confirmationContainer">
+                    <div>
+                        <form>
+                            <div class="form-group">
+                                <label for="fname">First name</label><span> *</span>
+                                <input type="text" id="fname" name="fname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last name</label><span> *</span>
+                                <input type="text" id="lname" name="lname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label><span> *</span>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" id="phone" name="phone" required>
+                            </div>
+                        </form>
+                        <!-- Note Container -->
+                        <div class="note-container">
+                            <h3>Note</h3>
+                            <div class="note">
+                                <span class="title">Staff:</span><span id="staffName"></span><br />
+                                <span class="title">Service:</span><span id="serviceName"></span><br />
+                                <span class="title">Date:</span><span id="dateAndtime"></span><br />
+                                <span class="title">Total:</span><span id="price"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Buttons Container -->
+            <div class="buttons-container">
+                <button class="button-next" id="button2">NEXT</button>
+                <button class="button-back" id="button1" style="display: none;">BACK</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
